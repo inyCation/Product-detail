@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <NavLink to="/product" activeClassName="active-link">
-        Go To Card
+        Go To Cart
       </NavLink>
       <h1>Products</h1>
       {products.map(item => (
