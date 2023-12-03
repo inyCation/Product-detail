@@ -1,6 +1,6 @@
 // App.jsx
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link,NavLink } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -23,13 +23,13 @@ function App() {
       {products.map(item => (
         <div className='items' key={item.id}>
           <img className='image' src={item.image} alt={item.title} />
-          <a
-            href={`/product/${item.id}`}
+          <Link
+            to={`/product/${item.id}`}
             onClick={() => setProduct(() => [item.id])}
             className='btn'
           >
             View {item.title}
-          </a>
+          </Link>
         </div>
       ))}
     </>
